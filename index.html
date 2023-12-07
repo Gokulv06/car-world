@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</head>
+<body>
+   <form id="newform" class="p-5 " style="height: 500px;">
+       <div class="row">
+        <div>
+            <h1 class="text-primary text-center">Car World</h1>
+
+        </div>
+
+        <!-- car details -->
+     <span class="col-4 border boredr-3 p-5">
+        <div>
+            <h3 class="text-center text-primary ">car details</h3>
+        </div>
+        <div class="col-12">
+            <form class="col-4" id="storeForm">
+                    <label for="fname">Car Brand</label>
+                    <input type="text" id="brand" name="fname"  placeholder="Car brand" class="form-control mb-2">
+                    <label for="lname">Price</label>
+                    <input type="text" id="price" name="lname" placeholder="Price" class="form-control mb-2">
+                    <label for="fname">Key</label>
+                    <input type="text" id="key" name="fname"  placeholder="Key"class="form-control mb-2">
+                    <div class="d-grid gap-2 col-4">
+                        <button class="btn btn-outline-success" type="submit" onclick="storerecord()" id="btn">Store Record</button>
+
+                      </div>  
+                  
+            </form>
+        </div>
+    </span>
+    <span class="col-4 border boredr-3 p-5 " id="form">
+        <div>
+            <h3 class="text-center text-primary ">Enter Key To Retrive <br> Items</h3>
+        </div>
+        <div class="col-12">
+            <form class="col-12" >
+                    <label for="fname" >Key</label>
+                    <input type="text" id="key"  placeholder="key" class="form-control mb-2">
+                    <div class="d-grid gap-2 col-4">
+                        <button  class="btn btn-outline-primary" type="submit" onclick="Retriverecord()">Retrive Record</button>
+                      </div>  
+                  <div id="result"></div>
+            </form>
+        </div>
+    </span>
+    <span class="col-4 border boredr-3 p-5 ">
+        <div>
+            <h3 class="text-center text-primary ">Enter Key TO delete <br> Item</h3>
+        </div>
+        <div class="col-12">
+            <form class="col-12" id="deleteForm">
+                    <label for="fname"  >Key</label>
+                    <input  type="text" name="fname" id="deleteKey" placeholder="key" class="form-control mb-2">
+                    <div class="d-grid gap-2 col-5">
+
+                        <button  class="btn btn-outline-danger " type="submit" onclick="removerecord()">Remove Record</button>
+
+                      </div>  
+                  
+            </form>
+        </div>
+    </span>
+
+    <div class="d-grid gap-2 col-12 p-2">
+        <button id="clearAll" class="btn btn-outline-dark" type="button" onclick="Clearall()">Clear ALL</button>
+    </div>
+
+       </div>
+
+
+   </form>
+    <script src="./car.js"></script>
+</body>
+</html>
